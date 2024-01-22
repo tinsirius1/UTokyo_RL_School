@@ -21,7 +21,7 @@ As a prerequisite, you have to WSL2 installed, if you are not sure you already i
 ### Installing Docker Desktop
 If you already have WSL2 installed, consult this [webpage](https://docs.docker.com/desktop/install/windows-install/) for installation. It should be very straightforward, download the `.exe` file and install. 
 
-[This](https://youtu.be/HbMPZl0Hd90) is a video of my attempt
+[This](https://youtu.be/HbMPZl0Hd90) is a video of my attempt.
 
 ## 1b. Installing Docker Desktop on MacOS
 Download and install [Docker Desktop from here https://docs.docker.com/desktop/install/mac-install/](https://docs.docker.com/desktop/install/mac-install/).
@@ -47,6 +47,8 @@ Follow the instructions there to install Docker or use the command line:
 Note, if you have problem with "name already exists", you can run:
 - In Linux: `docker stop tokyo-rl && docker rm tokyo-rl`
 - In Windows Powershell: `docker stop tokyo-rl; docker rm tokyo-rl`
+
+[This](https://youtu.be/bW-nrVSc-tk) is a video of my attempt.
 
 If you have nvidia driver and NVIDIA container toolkit, and you want to run the docker with GPU, you can run
 
