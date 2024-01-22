@@ -1,0 +1,13 @@
+version: '3'
+services:
+  tokyo-rl-jupyterlab:
+    extends:
+      file: docker-compose.yml
+      service: tokyo-rl-jupyterlab
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

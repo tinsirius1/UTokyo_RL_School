@@ -1,0 +1,17 @@
+version: '3'
+services:
+  tokyo-rl-jupyterlab:
+    build: .
+    user: root
+    ports:
+      - 9000:9000
+      - 8080-8089:8080-8089
+    container_name: tokyo-rl
+    volumes:
+      - ./:/home/tokyo-rl/local
+    command: "jupyter lab \
+      --NotebookApp.notebook_dir=/home/tokyo-rl/local \
+      --NotebookApp.default_url=/lab/ \
+      --ip=0.0.0.0 \
+      --allow-root \
+      --port=9000"
