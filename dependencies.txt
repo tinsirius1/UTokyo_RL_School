@@ -15,7 +15,7 @@ Box2D==2.3.10
 pygame==2.1.2
 transformers==4.21.3
 tensorboardX==2.5.1
-ece4078==1.1.7
+ece4078==1.1.9
 notebook==6.4.8
 jupyterlab==4.0.3 
 ipympl==0.9.3
