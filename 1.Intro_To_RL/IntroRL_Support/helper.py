@@ -1,5 +1,6 @@
 from IPython.display import HTML
 import numpy as np
+from copy import deepcopy
 
 def HTML_print(array, color_indices, color='red', spacing=15):
     table_html = "<table>"
@@ -15,22 +16,15 @@ def HTML_print(array, color_indices, color='red', spacing=15):
 
     display(HTML(table_html))
 
-# Example usage
-array_2d = np.array([[1, 2, 3], [4, np.nan, 6], [7, 8, 9]])
-color_indices = [(1, 1), (2, 2)]  # List of indices to color (row, column)
-
-# Example usage with larger spacing
-HTML_print(array_2d, color_indices)
-
 def fill_grid(grid, array):
     if not isinstance(grid, np.ndarray) or not isinstance(array, np.ndarray):
         raise ValueError("Both inputs must be numpy arrays.")
 
-    if (~np.isnan(grid_world.grid)).sum() != len(array):
+    if (~np.isnan(grid)).sum() != len(array):
         raise ValueError("The number of non-NaN elements in the 2D array must match the length of the 1D array.")
 
-    filled_grid = deepcopy(grid_world.grid)
-    filled_grid[~np.isnan(grid_world.grid)] = array
+    filled_grid = deepcopy(grid)
+    filled_grid[~np.isnan(grid)] = array
 
     return filled_grid
 
