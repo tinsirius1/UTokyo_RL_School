@@ -14,7 +14,7 @@ test = {
                     ...     expected_opt_pol = data['optimal_policy']
                     ...     grid_world = GridEnv(gamma=data['gamma'], noise=data['noise'], living_reward=data['living_reward'])
                     ...     _, optimal_policy = value_iteration(grid_world, plot=False)
-                    ...     total_correct = np.sum(np.isclose(expected_opt_pol.flatten(), optimal_policy.flatten()))
+                    ...     total_correct = np.sum(np.isclose(expected_opt_pol.flatten(), optimal_policy.flatten(), equal_nan = True))
                     ...     passed = passed and (total_correct >= len(expected_opt_pol.flatten()) * 0.3)
                     >>> passed
                     True
@@ -34,7 +34,7 @@ test = {
                     ...     expected_opt_pol = data['optimal_policy']
                     ...     grid_world = GridEnv(gamma=data['gamma'], noise=data['noise'], living_reward=data['living_reward'])
                     ...     _, optimal_policy = value_iteration(grid_world, plot=False)
-                    ...     total_correct = np.sum(np.isclose(expected_opt_pol.flatten(), optimal_policy.flatten()))
+                    ...     total_correct = np.sum(np.isclose(expected_opt_pol.flatten(), optimal_policy.flatten(), equal_nan = True))
                     ...     passed = passed and total_correct >= len(expected_opt_pol.flatten()) * 0.7
                     >>> passed
                     True
@@ -54,7 +54,7 @@ test = {
                     ...     expected_opt_pol = data['optimal_policy']
                     ...     grid_world = GridEnv(gamma=data['gamma'], noise=data['noise'], living_reward=data['living_reward'])
                     ...     _, optimal_policy = value_iteration(grid_world, plot=False)
-                    ...     total_correct = np.sum(np.isclose(expected_opt_pol.flatten(), optimal_policy.flatten()))
+                    ...     total_correct = np.sum(np.isclose(expected_opt_pol.flatten(), optimal_policy.flatten(), equal_nan = True))
                     ...     passed = passed and total_correct >= len(expected_opt_pol.flatten()) * 0.92
                     >>> passed
                     True
